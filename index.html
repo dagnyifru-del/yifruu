@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yifru Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      width: 100%;
+      height: 100px;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px;
+      background: #9f3131;
+      margin-top: 0px;
+    }
+    .nav-links li {
+      display: inline;
+      margin: 0px 15px;
+    }
+    .nav-links a {
+      color: #0ff; /* Neon cyan */
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      text-align: center;
+      margin: 0px;
+      background: url('your-image.jpg') no-repeat center center/cover;
+    }
+    .hero-content h1 span {
+      color: #0ff;
+    }
+    .hero-content {
+      display: block;
+      max-width: 600px;
+      text-align: left;
+      padding: 80px;  
+    }
+    .btn {
+      background: #0ff;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background: #00ffaa;
+    }
+    .here {
+      display: flex;
+      margin-top:0;
+      border-top: 8px;
+      padding:105px 40px;
+      height: 500px;
+    }
+    .hero-image {
+      display: flex;
+      width: 250px;
+      height: 300px;
+      border-radius: 20px;
+      border: 3px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    /* About Section */
+    #about {
+      padding: 50px;
+      background: #907e7e;
+      height: 500px;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 50px;
+    }
+    .about-text {
+      flex: 1;
+      max-width: 600px;
+      text-align: left;
+    }
+    .about-text h2 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+    .more {
+      display: none;
+      margin-top: 0px;
+      color: #ccc;
+    }
+    #toggle {
+      display: none;
+    }
+    #toggle:checked ~ .more {
+      display: block;
+    }
+    .about-image img {
+      display: flex;
+      width: 150px;
+      height: 200px;
+      border-radius: 20px;
+      border: 3px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    /* Projects Section */
+    #projects {
+      width: 100%;
+      background: #111;
+      display: flex;
+      margin: 20px;
+      border: #00ffaa;
+      height: 500px;
+    }
+    .project-card {
+      background: #1a1a1a;
+      border: 4px solid #0ff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    .project-card h3 {
+      color: #0ff;
+    }
+    .project-card a {
+      color: #0ff;
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 50px;
+      background: #111;
+      text-align: center;
+      height: 500px;
+     
+      
+    }
+    #contact h2 {
+      color: #0ff;
+    }
+    #contact a {
+      color: #0ff;
+    }
+    .logo {
+      width: 1px;
+      height: 2px;
+    }
+    .name { border: 8px solid #1e2724; 
+    padding: 20px;
+    margin: 10px ;
+  padding: 10px 20px;
+    background-color: #00ffaa;
+    }
+
+    .fotter{
+        margin-top: 20px ;
+        color: #000;
+        background-color: #00ffaa;
+        height: 240px;
+        text-align: center;
+        padding: 40px;
+         margin-bottom:0 ;
+         width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo"> yifru</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.google.com/chrome/" target="_blank">
+            <span class="search-icon">🔍</span> Search...
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="here">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Yifru</span></h1>
+      <p>Computer Science Student & Web Developer</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="hero-image">
+      <img src="yifru.jpg" alt="Yifru Profile Picture">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Yifru, a Computer Science student at Borana University.
+          I specialize in web development with skills in PHP, MySQL, HTML, CSS, and JavaScript.
+          I enjoy building responsive, professional websites and integrating backend systems
+          for seamless user experiences.
+        </p>
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="btn">Read More</label>
+        <p class="more">
+          Beyond web development, I am passionate about algorithmic problem solving
+          (DFS, BFS, pathfinding, cycle detection) and exploring computer graphics.
+          I have hands-on experience with display technologies (LCD, LED, OLED, Plasma)
+          and I am learning Blender for 3D modeling. My short-term goals include
+          successfully presenting my graduation project, building a stunning portfolio,
+          and preparing for job recruitment with strong technical and design skills.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="yifru.jpg" alt="Yifru Profile Picture">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <h3>Student Academic Placement System</h3>
+      <p>A robust system for managing student placements with responsive UI and secure backend.</p>
+      <a href="link-to-demo">View Demo</a>
+    </div>
+    <div class="project-card">
+      <h3>Registration Form</h3>
+      <p>PHP/MySQL form with input validation and password security.</p>
+      <a href="link-to-code">View Code</a>
+    </div>
+    <div class="project-card">
+      <h3>Algorithm Visualizer</h3>
+      <p>Interactive DFS/BFS pathfinding visualizer built with JavaScript.</p>
+      <a href="link-to-demo">Try It</a>
+    </div>
+     <div class="project-card">
+      <h3>Algorithm Visualizer</h3>
+      <p>Interactive DFS/BFS pathfinding visualizer built with JavaScript.</p>
+      <a href="link-to-demo">Try It</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you’d like to reach out, here are my details:</p>
+    <ul>
+      <li>Email: yifru@example.com</li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/yifru" target="_blank">linkedin.com/in/yifru</a></li>
+      <li>GitHub: <a href="https://github.com/yifru" target="_blank">github.com/yifru</a></li>
+    </ul>
+    <p>I’m always open to collaboration, new opportunities, and sharing ideas!</p>
+
+    <!-- Contact Form -->
+     <section class="form">
+   <form action="action_page.php" method="POST">
+    <div class="name">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+</div>
+<div class="name">
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" required><br>
+</div><div class="name">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+</div><div class="name">
+  <label for="comment">Comment:</label><br>
+  <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+</div >
+</section>
+  <input type="submit" value="Submit">
+</form>
+</body>
+<footer class="fotter">@ I AM YIFRU DAGNE 2027 G C </footer>
+</html>
